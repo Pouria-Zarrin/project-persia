@@ -83,9 +83,15 @@ export BUNNY_API_KEY='your-storage-api-key'
 |------|-------|
 | **Account Email** | pouria79zarrin@gmail.com |
 | **Domain** | waronpersia.com |
+| **Zone ID** | `***REMOVED***` |
+| **Account ID** | `***REMOVED***` |
 | **CLI Tool** | Wrangler v4.59.2 |
 | **Auth Method** | OAuth Token |
-| **Account ID** | ***REMOVED*** |
+
+**API Token** (Edit zone DNS):
+```
+***REMOVED***
+```
 
 **Verify Authentication**:
 ```bash
@@ -94,16 +100,15 @@ wrangler whoami
 
 **DNS Setup Script**:
 ```bash
-export CLOUDFLARE_API_TOKEN='your-api-token'
+export CLOUDFLARE_API_TOKEN='***REMOVED***'
 ./scripts/cloudflare-dns.sh
 ```
 
-**To Create API Token**:
-1. Go to: https://dash.cloudflare.com/profile/api-tokens
-2. Click **Create Token**
-3. Use **Edit zone DNS** template
-4. Zone Resources: `Include → Specific zone → waronpersia.com`
-5. Create and copy token
+**DNS Records Configured** (2026-01-16):
+| Type | Name | Target | Proxy |
+|------|------|--------|-------|
+| CNAME | @ | pouria-zarrin.github.io | OFF |
+| CNAME | www | pouria-zarrin.github.io | OFF |
 
 ---
 
@@ -214,7 +219,7 @@ project-persia/
 | - | Purchase domain (waronpersia.com) | ✅ Done |
 | - | Configure GitHub Pages CNAME | ✅ Done |
 | - | Create Cloudflare DNS script | ✅ Done |
-| - | Add DNS records in Cloudflare | 🔄 Pending |
+| - | Add DNS records in Cloudflare | ✅ Done |
 | - | Upload media to Bunny CDN | 🔄 Pending |
 
 ---
@@ -227,6 +232,7 @@ project-persia/
 | `ced8423` | Add Bunny CDN CLI scripts for bulk upload, list, and delete |
 | `816fbf7` | Redesign site with minimal theme, add blog page, gallery filtering, video lightbox |
 | `532e860` | Create CNAME (GitHub auto-created) |
+| `faf8e4b` | Add project status and credentials reference document |
 
 ---
 
@@ -299,7 +305,7 @@ npx serve
 
 | Service | URL |
 |---------|-----|
-| **Live Site** | https://waronpersia.com (pending DNS) |
+| **Live Site** | https://waronpersia.com |
 | **GitHub Pages** | https://pouria-zarrin.github.io/project-persia/ |
 | **GitHub Repo** | https://github.com/Pouria-Zarrin/project-persia |
 | **Bunny CDN** | https://persia-cdn.b-cdn.net/ |
@@ -310,15 +316,23 @@ npx serve
 
 ## Next Steps
 
-1. **Add DNS records in Cloudflare** (pending API token)
+1. ~~**Add DNS records in Cloudflare**~~ ✅ Done
    - CNAME @ → pouria-zarrin.github.io
    - CNAME www → pouria-zarrin.github.io
 
 2. **Wait for DNS propagation** (5-15 minutes)
+   ```bash
+   dig waronpersia.com +short
+   dig www.waronpersia.com +short
+   ```
 
-3. **Verify HTTPS** is working on waronpersia.com
+3. **Verify HTTPS** is working on https://waronpersia.com
 
 4. **Upload media to Bunny CDN**
+   ```bash
+   export BUNNY_API_KEY='your-storage-api-key'
+   ./scripts/bunny-upload.sh ./local-folder remote-folder
+   ```
 
 5. **Update HTML** with actual CDN image/video URLs
 
