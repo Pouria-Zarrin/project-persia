@@ -111,9 +111,9 @@ project-persia/
 **Option B: FTP Client (for bulk uploads)**
 1. Get FTP credentials from Storage Zone settings
 2. Use FileZilla or similar:
-   - Host: `storage.bunnycdn.com`
+   - Host: `la.storage.bunnycdn.com`
    - Username: `persia-media`
-   - Password: (from dashboard)
+   - Password: `***REMOVED***`
    - Port: 21
 
 **Option C: API Upload (programmatic)**
@@ -577,16 +577,112 @@ Setup is more complex but can reduce costs to nearly zero for moderate traffic.
 
 ---
 
+## Progress Log
+
+### Session: 2026-01-16
+
+#### Completed Tasks
+
+| Task | Status | Details |
+|------|--------|---------|
+| Install GitHub CLI | Done | Installed `gh` v2.45.0 via apt on Ubuntu 24.04 |
+| Authenticate GitHub CLI | Done | Logged in as `Pouria-Zarrin` via web browser auth |
+| Create GitHub Repository | Done | Public repo created at `Pouria-Zarrin/project-persia` |
+| Initialize Git | Done | Configured user identity, branch set to `main` |
+| Push Initial Code | Done | Initial commit with 7 files pushed to origin |
+| Enable GitHub Pages | Done | Pages enabled with legacy build from `main` branch |
+
+#### Repository Details
+
+- **GitHub Repo**: https://github.com/Pouria-Zarrin/project-persia
+- **Live Site URL**: https://pouria-zarrin.github.io/project-persia/
+- **Branch**: `main`
+- **Pages Source**: `/` (root)
+
+#### Files Created
+
+```
+project-persia/
+├── index.html              # Homepage (basic template)
+├── gallery.html            # Gallery page with placeholder
+├── about.html              # About page
+├── css/
+│   └── styles.css          # Full responsive styles + lightbox
+├── js/
+│   └── main.js             # Lightbox functionality
+├── assets/
+│   └── icons/              # (empty, for small icons)
+└── memory/
+    └── 001-github-pages-media-hosting-plan.md
+```
+
+#### Commands Executed
+
+```bash
+# Install GitHub CLI
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/etc/apt/keyrings/githubcli-archive-keyring.gpg
+sudo apt install gh -y
+
+# Authenticate (manual step via browser)
+gh auth login
+
+# Initialize repository
+git init
+git config user.email "pouria79zarrin@gmail.com"
+git config user.name "Pouria Zarrin"
+git branch -m main
+git add .
+git commit -m "Initial commit: Basic site structure with HTML, CSS, JS"
+
+# Create and push to GitHub
+gh repo create project-persia --public --description "Portfolio/Gallery website with GitHub Pages" --source=. --push
+
+# Enable GitHub Pages
+gh api repos/Pouria-Zarrin/project-persia/pages -X POST -F build_type=legacy -F source[branch]=main -F source[path]=/
+```
+
+---
+
 ## Next Steps
 
-1. [ ] Create GitHub repository
-2. [ ] Set up Bunny CDN account and storage zone
-3. [ ] Create basic site structure
-4. [ ] Upload initial media files
-5. [ ] Test and iterate
-6. [ ] (Optional) Set up custom domain
+| Priority | Task | Status |
+|----------|------|--------|
+| 1 | Set up Bunny CDN account | Pending |
+| 2 | Create storage zone and pull zone | Pending |
+| 3 | Upload media files to CDN | Pending |
+| 4 | Update HTML with CDN media URLs | Pending |
+| 5 | Customize site content and styling | Pending |
+| 6 | (Optional) Set up custom domain | Pending |
+
+---
+
+## Quick Reference
+
+### Local Development
+```bash
+# Serve locally
+python -m http.server 8000
+# or
+npx serve
+
+# View at http://localhost:8000
+```
+
+### Deploy Changes
+```bash
+git add .
+git commit -m "Description of changes"
+git push origin main
+# Wait 1-2 minutes for GitHub Pages to rebuild
+```
+
+### Check Deployment Status
+```bash
+gh api repos/Pouria-Zarrin/project-persia/pages --jq '.status'
+```
 
 ---
 
 *Document created: 2026-01-16*
+*Last updated: 2026-01-16*
 *Project: Project Persia*

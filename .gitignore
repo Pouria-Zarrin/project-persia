@@ -1,0 +1,22 @@
+# Environment and secrets
+.env
+.env.local
+*.key
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Local media (upload to CDN instead)
+media/
+uploads/
+
+# Node modules (if using build tools)
+node_modules/
+
+# Logs
+*.log
