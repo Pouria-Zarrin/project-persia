@@ -113,7 +113,7 @@ project-persia/
 2. Use FileZilla or similar:
    - Host: `la.storage.bunnycdn.com`
    - Username: `persia-media`
-   - Password: `***REMOVED***`
+   - Password: [Get from Bunny dashboard or local .env]
    - Port: 21
 
 **Option C: API Upload (programmatic)**

@@ -60,7 +60,7 @@ gh auth status
 ```
 Host: la.storage.bunnycdn.com
 Username: persia-media
-Password: ***REMOVED***
+Password: [STORED LOCALLY - see ~/.env or password manager]
 Port: 21
 ```
 
@@ -83,14 +83,14 @@ export BUNNY_API_KEY='your-storage-api-key'
 |------|-------|
 | **Account Email** | pouria79zarrin@gmail.com |
 | **Domain** | waronpersia.com |
-| **Zone ID** | `***REMOVED***` |
-| **Account ID** | `***REMOVED***` |
+| **Zone ID** | [STORED LOCALLY] |
+| **Account ID** | [STORED LOCALLY] |
 | **CLI Tool** | Wrangler v4.59.2 |
 | **Auth Method** | OAuth Token |
 
 **API Token** (Edit zone DNS):
 ```
-***REMOVED***
+[STORED LOCALLY - see ~/.env or password manager]
 ```
 
 **Verify Authentication**:
@@ -100,7 +100,7 @@ wrangler whoami
 
 **DNS Setup Script**:
 ```bash
-export CLOUDFLARE_API_TOKEN='***REMOVED***'
+export CLOUDFLARE_API_TOKEN='your-token'
 ./scripts/cloudflare-dns.sh
 ```
 
