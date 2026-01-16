@@ -8,20 +8,63 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About</a>
-        </nav>
+        <div class="header-content">
+            <a href="index.html" class="logo">Persia</a>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <h1>Welcome to Project Persia</h1>
-        <p>A portfolio and gallery showcase.</p>
+        <section class="hero">
+            <h1>Project Persia</h1>
+            <p class="hero-subtitle">A collection of moments, stories, and creative work.</p>
+        </section>
 
-        <!-- Example: Image from CDN (replace with your Bunny CDN URL) -->
-        <!-- <img src="https://your-cdn.b-cdn.net/images/hero.jpg" alt="Hero image" loading="lazy"> -->
+        <section class="featured">
+            <h2>Featured Work</h2>
+            <div class="featured-grid">
+                <!-- Replace src with your Bunny CDN URLs -->
+                <a href="gallery.html" class="featured-item">
+                    <div class="featured-placeholder">
+                        <span>Image 1</span>
+                    </div>
+                    <!-- <img src="https://persia-cdn.b-cdn.net/images/featured/work1.jpg" alt="Featured work 1" loading="lazy"> -->
+                </a>
+                <a href="gallery.html" class="featured-item">
+                    <div class="featured-placeholder">
+                        <span>Image 2</span>
+                    </div>
+                </a>
+                <a href="gallery.html" class="featured-item">
+                    <div class="featured-placeholder">
+                        <span>Image 3</span>
+                    </div>
+                </a>
+            </div>
+            <a href="gallery.html" class="view-all">View all work →</a>
+        </section>
+
+        <section class="recent-posts">
+            <h2>Recent Posts</h2>
+            <div class="posts-list">
+                <article class="post-preview">
+                    <time datetime="2026-01-16">January 16, 2026</time>
+                    <h3><a href="blog.html">Welcome to Project Persia</a></h3>
+                    <p>An introduction to this creative space and what's to come.</p>
+                </article>
+            </div>
+            <a href="blog.html" class="view-all">All posts →</a>
+        </section>
     </main>
+
+    <footer>
+        <p>© 2026 Project Persia</p>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>

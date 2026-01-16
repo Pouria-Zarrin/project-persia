@@ -8,30 +8,94 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About</a>
-        </nav>
+        <div class="header-content">
+            <a href="index.html" class="logo">Persia</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <h1>Gallery</h1>
+        <section class="page-header">
+            <h1>Gallery</h1>
+            <p>A collection of images, videos, and creative work.</p>
+        </section>
 
-        <div class="gallery-grid">
-            <!-- Example gallery items (replace src with your Bunny CDN URLs) -->
-            <!--
-            <figure class="gallery-item">
-                <a href="https://your-cdn.b-cdn.net/images/gallery/photo1-full.jpg">
-                    <img src="https://your-cdn.b-cdn.net/images/thumbnails/photo1-thumb.jpg" alt="Photo 1" loading="lazy">
+        <section class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="image">Images</button>
+            <button class="filter-btn" data-filter="video">Videos</button>
+        </section>
+
+        <section class="gallery-grid">
+            <!-- Example image item -->
+            <figure class="gallery-item" data-type="image">
+                <a href="#" data-full="https://persia-cdn.b-cdn.net/images/gallery/photo1-full.jpg">
+                    <div class="item-placeholder">
+                        <span>Photo 1</span>
+                    </div>
+                    <!-- <img src="https://persia-cdn.b-cdn.net/images/thumbnails/photo1-thumb.jpg" alt="Photo 1" loading="lazy"> -->
                 </a>
-                <figcaption>Photo 1 Title</figcaption>
+                <figcaption>Photo Title</figcaption>
             </figure>
-            -->
 
-            <p class="placeholder">Gallery items will appear here once you add images to your CDN.</p>
-        </div>
+            <!-- Example video item -->
+            <figure class="gallery-item" data-type="video">
+                <a href="#" class="video-item" data-video="https://persia-cdn.b-cdn.net/videos/video1.mp4">
+                    <div class="item-placeholder video">
+                        <span>Video 1</span>
+                        <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                    <!-- <img src="https://persia-cdn.b-cdn.net/videos/thumbnails/video1-poster.jpg" alt="Video 1" loading="lazy"> -->
+                </a>
+                <figcaption>Video Title</figcaption>
+            </figure>
+
+            <!-- More placeholder items -->
+            <figure class="gallery-item" data-type="image">
+                <a href="#">
+                    <div class="item-placeholder"><span>Photo 2</span></div>
+                </a>
+                <figcaption>Photo Title</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-type="image">
+                <a href="#">
+                    <div class="item-placeholder"><span>Photo 3</span></div>
+                </a>
+                <figcaption>Photo Title</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-type="video">
+                <a href="#" class="video-item">
+                    <div class="item-placeholder video">
+                        <span>Video 2</span>
+                        <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </a>
+                <figcaption>Video Title</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-type="image">
+                <a href="#">
+                    <div class="item-placeholder"><span>Photo 4</span></div>
+                </a>
+                <figcaption>Photo Title</figcaption>
+            </figure>
+        </section>
     </main>
+
+    <footer>
+        <p>© 2026 Project Persia</p>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
