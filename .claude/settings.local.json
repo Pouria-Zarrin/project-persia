@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sudo rm:*)",
+      "Bash(curl:*)",
+      "Bash(sudo dd:*)",
+      "Bash(sudo chmod:*)",
+      "Bash(sudo tee:*)",
+      "Bash( sudo apt update)",
+      "Bash( sudo apt install gh -y)"
+    ]
+  }
+}
