@@ -3,100 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Project Persia</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Index of /persia/gallery</title>
+    <style>
+        body {
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 20px;
+            background: #fff;
+            color: #000;
+        }
+        h1 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 15px 0;
+        }
+        a {
+            color: #00e;
+        }
+        a:visited {
+            color: #551a8b;
+        }
+        .file-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .file-list li {
+            padding: 2px 0;
+        }
+        .file-list a {
+            text-decoration: none;
+        }
+        .file-list a:hover {
+            text-decoration: underline;
+        }
+        .dir {
+            font-weight: bold;
+        }
+        .meta {
+            color: #666;
+            margin-left: 20px;
+        }
+        .size {
+            color: #666;
+            display: inline-block;
+            width: 80px;
+            text-align: right;
+            margin-right: 10px;
+        }
+        footer {
+            margin-top: 30px;
+            color: #666;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <a href="index.html" class="logo">Persia</a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="gallery.html" class="active">Gallery</a>
-                <a href="blog.html">Blog</a>
-                <a href="about.html">About</a>
-            </nav>
-        </div>
-    </header>
 
-    <main>
-        <section class="page-header">
-            <h1>Gallery</h1>
-            <p>A collection of images, videos, and creative work.</p>
-        </section>
+<h1>Index of /persia/gallery</h1>
 
-        <section class="gallery-filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="image">Images</button>
-            <button class="filter-btn" data-filter="video">Videos</button>
-        </section>
+<hr>
 
-        <section class="gallery-grid">
-            <!-- Example image item -->
-            <figure class="gallery-item" data-type="image">
-                <a href="#" data-full="https://persia-cdn.b-cdn.net/images/gallery/photo1-full.jpg">
-                    <div class="item-placeholder">
-                        <span>Photo 1</span>
-                    </div>
-                    <!-- <img src="https://persia-cdn.b-cdn.net/images/thumbnails/photo1-thumb.jpg" alt="Photo 1" loading="lazy"> -->
-                </a>
-                <figcaption>Photo Title</figcaption>
-            </figure>
+<ul class="file-list">
+    <li><a href="index.html" class="dir">[../]</a> <span class="meta">- parent directory</span></li>
+</ul>
 
-            <!-- Example video item -->
-            <figure class="gallery-item" data-type="video">
-                <a href="#" class="video-item" data-video="https://persia-cdn.b-cdn.net/videos/video1.mp4">
-                    <div class="item-placeholder video">
-                        <span>Video 1</span>
-                        <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                    </div>
-                    <!-- <img src="https://persia-cdn.b-cdn.net/videos/thumbnails/video1-poster.jpg" alt="Video 1" loading="lazy"> -->
-                </a>
-                <figcaption>Video Title</figcaption>
-            </figure>
+<hr>
 
-            <!-- More placeholder items -->
-            <figure class="gallery-item" data-type="image">
-                <a href="#">
-                    <div class="item-placeholder"><span>Photo 2</span></div>
-                </a>
-                <figcaption>Photo Title</figcaption>
-            </figure>
+<p><strong>Images:</strong></p>
 
-            <figure class="gallery-item" data-type="image">
-                <a href="#">
-                    <div class="item-placeholder"><span>Photo 3</span></div>
-                </a>
-                <figcaption>Photo Title</figcaption>
-            </figure>
+<ul class="file-list">
+    <li><span class="size">--</span> <a href="#">photo_001.jpg</a></li>
+    <li><span class="size">--</span> <a href="#">photo_002.jpg</a></li>
+    <li><span class="size">--</span> <a href="#">photo_003.jpg</a></li>
+    <li><span class="size">--</span> <a href="#">photo_004.jpg</a></li>
+</ul>
 
-            <figure class="gallery-item" data-type="video">
-                <a href="#" class="video-item">
-                    <div class="item-placeholder video">
-                        <span>Video 2</span>
-                        <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                    </div>
-                </a>
-                <figcaption>Video Title</figcaption>
-            </figure>
+<hr>
 
-            <figure class="gallery-item" data-type="image">
-                <a href="#">
-                    <div class="item-placeholder"><span>Photo 4</span></div>
-                </a>
-                <figcaption>Photo Title</figcaption>
-            </figure>
-        </section>
-    </main>
+<p><strong>Videos:</strong></p>
 
-    <footer>
-        <p>© 2026 Project Persia</p>
-    </footer>
+<ul class="file-list">
+    <li><span class="size">--</span> <a href="#">video_001.mp4</a></li>
+    <li><span class="size">--</span> <a href="#">video_002.mp4</a></li>
+</ul>
 
-    <script src="js/main.js"></script>
+<hr>
+
+<footer>
+    <a href="index.html">waronpersia.com</a> | gallery/
+</footer>
+
 </body>
 </html>
